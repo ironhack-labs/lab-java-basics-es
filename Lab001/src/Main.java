@@ -37,7 +37,7 @@ public class Main {
         System.out.println("John Quackgerald Kennedy, 2025.");
     }
 
-    // Method to calculate the salary difference between the highest and lowest salary
+    // Method to calculate the salary difference between the highest salary and lowest salary
     public static double getSalaryDifference(List<Employee> employees) {
         double maxSalary = employees.get(0).getSalary();
         double minSalary = employees.get(0).getSalary();
