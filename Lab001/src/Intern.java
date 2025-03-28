@@ -1,22 +1,21 @@
 class Intern extends Employee {
-    private static final double MAX_SALARY = 20000; /* max salay is provided */
+    private static final double MAX_SALARY = 20000; // max salary for an intern
 
+    // Constructor for Intern class
     public Intern(String name, int age, double salary) {
-        super(name, age, salary); /* grabs name age and salary from superclass employee */
-        validateSalary(salary);
+        super(name, age, salary);
+        setSalary(salary);  // Ensure the salary is validated when setting
     }
 
+    // Override setSalary to ensure the salary is within the limit for Interns
     @Override
     public void setSalary(double salary) {
-        validateSalary(salary);
-        super.setSalary(salary);
-    }
-
-    private void validateSalary(double salary) {
         if (salary > MAX_SALARY) {
-            throw new IllegalArgumentException("Salary for intern cannot exceed " + MAX_SALARY);
-            /* we have used throw to have the code to print an error message is the salary exceed the allowed value */
+            super.setSalary(MAX_SALARY);  // Use the setter of Employee to set salary
+        } else {
+            super.setSalary(salary);  // Otherwise, set the salary as normal
         }
     }
 }
+
 
