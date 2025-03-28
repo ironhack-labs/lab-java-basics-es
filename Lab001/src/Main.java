@@ -6,7 +6,7 @@ public class Main {
         System.out.println("Hired Staff Report + Salary details");
         System.out.println("-----------------------------------");
 
-        // Create a list of employees
+        // Create a list of 10 employees
         List<Employee> employees = new ArrayList<>();
         employees.add(new Employee("Marco", 35, 1900));
         employees.add(new Employee("Alino", 15, 2000));

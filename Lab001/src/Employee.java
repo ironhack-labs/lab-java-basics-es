@@ -30,7 +30,7 @@ class Employee {
         this.salary = salary;
     }
 
-    // toString method to represent the Employee as a string
+    // toString method to represent the Employee in a string with values recalled
     @Override
     public String toString() {
         return "Employee name= " + name + ", age= " + age + ", salary= " + salary;
